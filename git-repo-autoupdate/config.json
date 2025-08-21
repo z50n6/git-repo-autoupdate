@@ -1,24 +1,6 @@
 {
   "repositories": [
-	"E:\\Penetration\\BlueTeam\\脚本检测\\一键Windows应急响应检测脚本\\Winscan",
-    "E:\\Penetration\\RedTeam\\AuxiliaryTools\\google-plugins\\BucketTool",
-    "E:\\Penetration\\BlueTeam\\脚本检测\\LinuxCheck\\emergency_response",
-    "E:\\Penetration\\RedTeam\\AuxiliaryTools\\google-plugins\\Jssx",
-    "E:\\Penetration\\RedTeam\\AuxiliaryTools\\google-plugins\\Jsmoke",
-    "E:\\Penetration\\RedTeam\\AuxiliaryTools\\google-plugins\\LuckyCat",
-    "E:\\Penetration\\RedTeam\\AuxiliaryTools\\google-plugins\\SnowEyes",
-    "E:\\Penetration\\RedTeam\\ComprehensiveTools\\ss0t-Scan",
-    "E:\\Penetration\\RedTeam\\Credential_Access\\passwd\\fuzzDicts",
-    "E:\\Penetration\\RedTeam\\Credential_Access\\passwd\\SecLists",
-    "E:\\Penetration\\RedTeam\\Information_Collection\\comprehensive\\网络空间\\NoMoney",
-    "E:\\Penetration\\RedTeam\\Information_Collection\\fingerprint_recognition\\Finger",
-    "E:\\Penetration\\RedTeam\\Information_Collection\\JS_crawler\\ChkApi_0x727",
-    "E:\\Penetration\\RedTeam\\Post-Exploition\\fxray",
-    "E:\\Penetration\\RedTeam\\TrafficProxyTools\\proxy-pool\\fir-proxy",
-    "E:\\Penetration\\RedTeam\\Vulnerability_Exploit\\SpringBoot\\autoswagger",
-    "E:\\Penetration\\RedTeam\\Vulnerability_Exploit\\OA\\用友\\fupo_for_yonyou",
-    "E:\\Penetration\\RedTeam\\Vulnerability_Exploit\\top10\\sqlmap",
-    "E:\\Penetration\\RedTeam\\Vulnerability_Exploit\\未授权\\Unauthorized_VUL_GUI"
-  ],
+    "d:\\code\\repo1"
+	],
   "proxy": "127.0.0.1:7890"
 }
