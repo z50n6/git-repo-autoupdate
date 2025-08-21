@@ -32,7 +32,7 @@
 
 
 
-最后找到有仓库的会携带编号打印出来，可以输入编号，会添加到config.json里，使用需要配合[git-repo-autoupdate](https://github.com/z50n6/git-repo-autoupdate/git-repo-autoupdate)  使用。
+最后找到有仓库的会携带编号打印出来，可以输入编号，会添加到config.json里，使用需要配合[git-repo-autoupdate](https://github.com/z50n6/git-repo-autoupdate/tree/main/git-repo-autoupdate)  使用。
 
 
 
@@ -44,7 +44,7 @@
 
 
 
-该工具打包后，跟[git-repo-autoupdate](https://github.com/z50n6/git-repo-autoupdate/git-repo-autoupdate) 放到同一个路径下使用
+该工具打包后，跟[git-repo-autoupdate](https://github.com/z50n6/git-repo-autoupdate/tree/main/git-repo-autoupdate) 打包后的exe放到同一个路径下使用
 
 ![image-20250821213954877](./imgs/image-20250821213954877.png)
 
