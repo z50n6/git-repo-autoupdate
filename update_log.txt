@@ -1,0 +1,354 @@
+[2025-08-21T17:02:58+08:00] 
+[36m🚀 正在更新仓库: quickstart[0m
+[2025-08-21T17:03:00+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:03:00+08:00] 
+[36m🚀 正在更新仓库: demo-scripts[0m
+[2025-08-21T17:03:01+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:15:20+08:00] 
+[36m🚀 正在更新仓库: quickstart[0m
+[2025-08-21T17:15:22+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:15:22+08:00] 
+[36m🚀 正在更新仓库: demo-scripts[0m
+[2025-08-21T17:15:23+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:15:23+08:00] 
+[36m🚀 正在更新仓库: excalidraw[0m
+[2025-08-21T17:15:28+08:00] [32m✔️ 更新成功:
+From https://github.com/excalidraw/excalidraw
+   56c05b309..c78e4aab7  master                 -> origin/master
+ * [new branch]          chore/mtolmacs/stale-issues-tracking -> origin/chore/mtolmacs/stale-issues-tracking
+ * [new branch]          chore/upgrade-eslint   -> origin/chore/upgrade-eslint
+ * [new branch]          dwelle/liquid-glass    -> origin/dwelle/liquid-glass
+ * [new branch]          feat/e2e-tests         -> origin/feat/e2e-tests
+ * [new branch]          fix-zsviczian-touchscreen-multielement -> origin/fix-zsviczian-touchscreen-multielement
+   a5a74be45..59635e316  mtolmacs/feat/arrow-redesign -> origin/mtolmacs/feat/arrow-redesign
+ * [new branch]          mtolmacs/feat/fixed-point-simple-arrow-binding -> origin/mtolmacs/feat/fixed-point-simple-arrow-binding
+ * [new branch]          pr/9715                -> origin/pr/9715
+   864353be5..c6f8ef9ad  release                -> origin/release
+ * [new branch]          ryan-di/crop-improvements -> origin/ryan-di/crop-improvements
+ * [new branch]          ryan-di/elbow-in-mermaid -> origin/ryan-di/elbow-in-mermaid
+ * [new branch]          ryan-di/fix/file-limit-ipad -> origin/ryan-di/fix/file-limit-ipad
+ * [new branch]          ryan-di/fix/file-loading-failure -> origin/ryan-di/fix/file-loading-failure
+   df1f9281b..86605829c  ryan-di/freedraw-width -> origin/ryan-di/freedraw-width
+ * [new branch]          ryan-di/line-snapping  -> origin/ryan-di/line-snapping
+ * [new branch]          ryan-di/mobile/double-tap -> origin/ryan-di/mobile/double-tap
+ * [new branch]          zsviczian-fix-wheelzoom-custom-embeddable -> origin/zsviczian-fix-wheelzoom-custom-embeddable
+Updating 56c05b309..c78e4aab7
+Fast-forward
+ .github/workflows/autorelease-excalidraw.yml       |    2 +-
+ .github/workflows/autorelease-preview.yml          |   55 -
+ .github/workflows/publish-docker.yml               |    7 +-
+ Dockerfile                                         |    9 +-
+ .../excalidraw/api/props/excalidraw-api.mdx        |   10 +-
+ .../docs/@excalidraw/excalidraw/development.mdx    |   24 +-
+ dev-docs/src/theme/ReactLiveScope/index.js         |    1 +
+ examples/with-nextjs/package.json                  |    3 +-
+ examples/with-script-in-browser/package.json       |    2 +-
+ examples/with-script-in-browser/vercel.json        |    2 +-
+ excalidraw-app/App.tsx                             |    7 -
+ excalidraw-app/components/DebugCanvas.tsx          |   58 +-
+ excalidraw-app/data/firebase.ts                    |    4 +-
+ excalidraw-app/data/index.ts                       |    7 +-
+ excalidraw-app/index.html                          |    4 +-
+ excalidraw-app/tests/collab.test.tsx               |   75 +-
+ package.json                                       |   15 +-
+ packages/common/package.json                       |    7 +-
+ packages/common/src/constants.ts                   |   46 +-
+ packages/common/src/utils.ts                       |   22 +-
+ packages/element/package.json                      |   11 +-
+ packages/element/src/Scene.ts                      |   20 +-
+ packages/element/src/ShapeCache.ts                 |   95 -
+ packages/element/src/align.ts                      |   11 +-
+ packages/element/src/binding.ts                    |  316 +-
+ packages/element/src/bounds.ts                     |  122 +-
+ packages/element/src/collision.ts                  |  506 +-
+ packages/element/src/cropElement.ts                |    6 +-
+ packages/element/src/delta.ts                      |  824 +++-
+ packages/element/src/distance.ts                   |   46 +-
+ packages/element/src/distribute.ts                 |   11 +-
+ packages/element/src/elbowArrow.ts                 |   86 +-
+ packages/element/src/embeddable.ts                 |   34 +-
+ packages/element/src/flowchart.ts                  |   11 +-
+ packages/element/src/fractionalIndex.ts            |   44 +-
+ packages/element/src/groups.ts                     |   77 +
+ packages/element/src/index.ts                      |    4 +-
+ packages/element/src/linearElementEditor.ts        |  258 +-
+ packages/element/src/mutateElement.ts              |   12 +-
+ packages/element/src/renderElement.ts              |    9 +-
+ packages/element/src/resizeElements.ts             |  249 +-
+ packages/element/src/{Shape.ts => shape.ts}        |  408 +-
+ packages/element/src/shapes.ts                     |  446 --
+ packages/element/src/store.ts                      |  163 +-
+ packages/element/src/textElement.ts                |    3 -
+ packages/element/src/transformHandles.ts           |    2 +-
+ packages/element/src/typeChecks.ts                 |    9 +
+ packages/element/src/types.ts                      |    3 +-
+ packages/element/src/utils.ts                      |  616 ++-
+ .../linearElementEditor.test.tsx.snap              |    2 +-
+ packages/element/tests/align.test.tsx              |  432 +-
+ packages/element/tests/binding.test.tsx            |   30 +-
+ packages/element/tests/collision.test.tsx          |   38 +
+ packages/element/tests/delta.test.tsx              |  427 +-
+ packages/element/tests/distribute.test.tsx         |  128 +
+ packages/element/tests/duplicate.test.tsx          |    2 -
+ packages/element/tests/embeddable.test.ts          |  153 +
+ .../element/tests/linearElementEditor.test.tsx     |  179 +-
+ packages/element/tests/resize.test.tsx             |   12 +-
+ packages/element/tests/sizeHelpers.test.ts         |   11 -
+ packages/excalidraw/actions/actionAlign.tsx        |   15 +-
+ packages/excalidraw/actions/actionCanvas.tsx       |    9 +-
+ .../excalidraw/actions/actionDeleteSelected.tsx    |   35 +-
+ packages/excalidraw/actions/actionDistribute.tsx   |    9 +-
+ .../actions/actionDuplicateSelection.tsx           |    2 +-
+ packages/excalidraw/actions/actionFinalize.tsx     |   98 +-
+ packages/excalidraw/actions/actionLinearEditor.tsx |   33 +-
+ packages/excalidraw/actions/actionProperties.tsx   |   84 +-
+ packages/excalidraw/actions/actionSelectAll.ts     |    2 +-
+ packages/excalidraw/appState.ts                    |    7 +-
+ packages/excalidraw/components/Actions.tsx         |  153 +-
+ packages/excalidraw/components/App.tsx             | 1438 +++---
+ .../components/CommandPalette/CommandPalette.scss  |    1 +
+ .../components/CommandPalette/CommandPalette.tsx   |    5 +-
+ packages/excalidraw/components/Ellipsify.tsx       |   18 +
+ packages/excalidraw/components/HintViewer.tsx      |   15 +-
+ packages/excalidraw/components/InlineIcon.tsx      |    1 +
+ packages/excalidraw/components/Stats/Dimension.tsx |  149 +-
+ packages/excalidraw/components/Stats/DragInput.tsx |   26 +-
+ .../excalidraw/components/Stats/MultiDimension.tsx |   85 +-
+ .../excalidraw/components/Stats/stats.test.tsx     |  226 +-
+ packages/excalidraw/components/Stats/utils.ts      |    8 +-
+ .../components/canvases/InteractiveCanvas.tsx      |    2 -
+ .../components/canvases/StaticCanvas.tsx           |   28 +-
+ .../components/dropdownMenu/DropdownMenu.scss      |    3 +
+ .../dropdownMenu/DropdownMenuItemContent.tsx       |    4 +-
+ packages/excalidraw/components/footer/Footer.tsx   |   21 +-
+ .../excalidraw/components/hyperlink/Hyperlink.tsx  |    2 +-
+ .../excalidraw/components/hyperlink/helpers.ts     |    2 +-
+ packages/excalidraw/components/shapes.tsx          |   21 +-
+ .../data/__snapshots__/transform.test.ts.snap      |    8 +-
+ packages/excalidraw/data/blob.ts                   |    6 +-
+ packages/excalidraw/data/reconcile.ts              |    4 +-
+ packages/excalidraw/data/restore.ts                |   64 +-
+ packages/excalidraw/data/transform.test.ts         |    2 +-
+ packages/excalidraw/eraser/index.ts                |  111 +-
+ packages/excalidraw/history.ts                     |  151 +-
+ packages/excalidraw/index.tsx                      |    2 +
+ packages/excalidraw/lasso/index.ts                 |    1 +
+ packages/excalidraw/lasso/utils.ts                 |   84 +-
+ packages/excalidraw/locales/en.json                |    2 +-
+ packages/excalidraw/package.json                   |   17 +-
+ packages/excalidraw/renderer/helpers.ts            |  257 +-
+ packages/excalidraw/renderer/interactiveScene.ts   |   54 +-
+ .../excalidraw/renderer/renderNewElementScene.ts   |   39 +-
+ packages/excalidraw/renderer/staticScene.ts        |    2 +-
+ packages/excalidraw/scene/Renderer.ts              |   15 -
+ packages/excalidraw/snapping.ts                    |   21 +-
+ .../excalidraw/tests/MermaidToExcalidraw.test.tsx  |    4 +-
+ .../tests/__snapshots__/contextmenu.test.tsx.snap  |  536 +--
+ .../tests/__snapshots__/dragCreate.test.tsx.snap   |   16 +-
+ .../tests/__snapshots__/excalidraw.test.tsx.snap   |   78 +-
+ .../tests/__snapshots__/export.test.tsx.snap       |    6 +-
+ .../tests/__snapshots__/history.test.tsx.snap      | 4881 +++++++++++---------
+ .../tests/__snapshots__/move.test.tsx.snap         |   50 +-
+ .../__snapshots__/multiPointCreate.test.tsx.snap   |    8 +-
+ .../__snapshots__/regressionTests.test.tsx.snap    | 1083 ++---
+ .../tests/__snapshots__/selection.test.tsx.snap    |   16 +-
+ packages/excalidraw/tests/contextmenu.test.tsx     |   20 +-
+ .../tests/data/__snapshots__/restore.test.ts.snap  |   24 +-
+ packages/excalidraw/tests/data/restore.test.ts     |   50 +-
+ packages/excalidraw/tests/dragCreate.test.tsx      |   14 +-
+ packages/excalidraw/tests/elementLocking.test.tsx  |   28 +-
+ packages/excalidraw/tests/flip.test.tsx            |   35 +-
+ packages/excalidraw/tests/helpers/api.ts           |   10 +-
+ packages/excalidraw/tests/helpers/mocks.ts         |   27 +
+ packages/excalidraw/tests/helpers/ui.ts            |   41 +-
+ packages/excalidraw/tests/history.test.tsx         |  340 +-
+ packages/excalidraw/tests/lasso.test.tsx           |    1 +
+ packages/excalidraw/tests/move.test.tsx            |    4 +-
+ packages/excalidraw/tests/queries/dom.ts           |   28 +-
+ packages/excalidraw/tests/regressionTests.test.tsx |    2 +-
+ packages/excalidraw/tests/rotate.test.tsx          |    2 +-
+ .../tests/scene/__snapshots__/export.test.ts.snap  |   12 +-
+ packages/excalidraw/tests/test-utils.ts            |   47 +-
+ packages/excalidraw/types.ts                       |   24 +-
+ packages/excalidraw/wysiwyg/textWysiwyg.test.tsx   |   96 +-
+ packages/math/package.json                         |   10 +-
+ packages/math/src/constants.ts                     |   57 +
+ packages/math/src/curve.ts                         |  252 +-
+ packages/math/src/index.ts                         |    1 +
+ packages/math/src/rectangle.ts                     |   15 +
+ packages/math/src/vector.ts                        |   14 +-
+ packages/utils/src/collision.ts                    |  135 -
+ packages/utils/src/export.ts                       |    2 +
+ packages/{excalidraw => utils/src}/visualdebug.ts  |    0
+ .../utils/tests/__snapshots__/export.test.ts.snap  |    4 +-
+ packages/utils/tests/collision.test.ts             |   90 -
+ scripts/autorelease.js                             |   71 -
+ scripts/buildBase.js                               |    5 +-
+ scripts/buildPackage.js                            |    5 +-
+ scripts/prerelease.js                              |   38 -
+ scripts/release.js                                 |  251 +-
+ scripts/updateChangelog.js                         |    6 +-
+ 154 files changed, 10869 insertions(+), 7088 deletions(-)
+ delete mode 100644 .github/workflows/autorelease-preview.yml
+ delete mode 100644 packages/element/src/ShapeCache.ts
+ rename packages/element/src/{Shape.ts => shape.ts} (61%)
+ delete mode 100644 packages/element/src/shapes.ts
+ create mode 100644 packages/element/tests/collision.test.tsx
+ create mode 100644 packages/element/tests/distribute.test.tsx
+ create mode 100644 packages/element/tests/embeddable.test.ts
+ create mode 100644 packages/excalidraw/components/Ellipsify.tsx
+ create mode 100644 packages/math/src/constants.ts
+ delete mode 100644 packages/utils/src/collision.ts
+ rename packages/{excalidraw => utils/src}/visualdebug.ts (100%)
+ delete mode 100644 packages/utils/tests/collision.test.ts
+ delete mode 100644 scripts/autorelease.js
+ delete mode 100644 scripts/prerelease.js
+[0m[2025-08-21T17:15:28+08:00] 
+[36m🚀 正在更新仓库: Winscan[0m
+[2025-08-21T17:15:30+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:15:30+08:00] 
+[36m🚀 正在更新仓库: BucketTool[0m
+[2025-08-21T17:15:32+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:15:32+08:00] 
+[36m🚀 正在更新仓库: emergency_response[0m
+[2025-08-21T17:15:34+08:00] [32m✔️ 更新成功:
+From https://github.com/Rabb1tQ/emergency_response
+   832a89e..de0606e  main       -> origin/main
+Updating 832a89e..de0606e
+Fast-forward
+ readme.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+[0m[2025-08-21T17:15:34+08:00] 
+[36m🚀 正在更新仓库: Jssx[0m
+[2025-08-21T17:15:35+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:15:35+08:00] 
+[36m🚀 正在更新仓库: Jsmoke[0m
+[2025-08-21T17:15:37+08:00] [32m✔️ 更新成功:
+From https://github.com/Yn8rt/Jsmoke
+   37da47b..522eb84  main       -> origin/main
+Updating 37da47b..522eb84
+Fast-forward
+ smoke.html | 32 ++++++++++++++++----------------
+ smoke.js   | 32 ++++++++++++++++++++++++++------
+ 2 files changed, 42 insertions(+), 22 deletions(-)
+[0m[2025-08-21T17:15:37+08:00] 
+[36m🚀 正在更新仓库: LuckyCat[0m
+[2025-08-21T17:15:39+08:00] [32m✔️ 更新成功:
+From https://github.com/qiwentaidi/LuckyCat
+   cdbc737..c668486  main       -> origin/main
+Updating cdbc737..c668486
+Fast-forward
+ manifest.json |  2 +-
+ popup.html    |  4 ++--
+ popup.js      | 38 ++++++++++++++++++++++++--------------
+ 3 files changed, 27 insertions(+), 17 deletions(-)
+[0m[2025-08-21T17:15:39+08:00] 
+[36m🚀 正在更新仓库: SnowEyes[0m
+[2025-08-21T17:15:42+08:00] [32m✔️ 更新成功:
+From https://github.com/SickleSec/SnowEyes
+   137eb03..71d0c09  main       -> origin/main
+Updating 137eb03..71d0c09
+Fast-forward
+ README.md                         |  73 ++-
+ background/background.js          | 747 ++++++++++++++---------------
+ content/config/scanner.config.js  |  35 +-
+ content/content.js                | 963 ++++++++++++++++++--------------------
+ content/filters/scanner.filter.js | 113 ++---
+ icons/config.png                  | Bin 0 -> 47477 bytes
+ icons/jiexi2.png                  | Bin 37629 -> 40969 bytes
+ icons/souji1.png                  | Bin 58132 -> 76512 bytes
+ icons/souji2.png                  | Bin 36040 -> 70936 bytes
+ icons/white.png                   | Bin 8406 -> 14191 bytes
+ icons/xiutan1.png                 | Bin 48317 -> 57477 bytes
+ icons/xiutan2.png                 | Bin 51729 -> 69000 bytes
+ manifest.json                     |   6 +-
+ popup/highlight.css               | 115 ++++-
+ popup/popup.html                  | 238 ++--------
+ popup/popup.js                    | 289 ++++++------
+ 16 files changed, 1207 insertions(+), 1372 deletions(-)
+ create mode 100644 icons/config.png
+[0m[2025-08-21T17:15:42+08:00] 
+[36m🚀 正在更新仓库: ss0t-Scan[0m
+[2025-08-21T17:15:43+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:15:43+08:00] 
+[36m🚀 正在更新仓库: fuzzDicts[0m
+[2025-08-21T17:15:45+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:15:45+08:00] 
+[36m🚀 正在更新仓库: SecLists[0m
+[2025-08-21T17:21:13+08:00] 
+[36m🚀 正在更新仓库: quickstart[0m
+[2025-08-21T17:21:15+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:21:15+08:00] 
+[36m🚀 正在更新仓库: demo-scripts[0m
+[2025-08-21T17:21:17+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:21:17+08:00] 
+[36m🚀 正在更新仓库: excalidraw[0m
+[2025-08-21T17:21:18+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:21:18+08:00] 
+[36m🚀 正在更新仓库: Winscan[0m
+[2025-08-21T17:21:20+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:21:20+08:00] 
+[36m🚀 正在更新仓库: BucketTool[0m
+[2025-08-21T17:21:21+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:21:21+08:00] 
+[36m🚀 正在更新仓库: emergency_response[0m
+[2025-08-21T17:21:23+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:21:23+08:00] 
+[36m🚀 正在更新仓库: Jssx[0m
+[2025-08-21T17:21:24+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:21:24+08:00] 
+[36m🚀 正在更新仓库: Jsmoke[0m
+[2025-08-21T17:21:26+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:21:26+08:00] 
+[36m🚀 正在更新仓库: LuckyCat[0m
+[2025-08-21T17:21:27+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:21:27+08:00] 
+[36m🚀 正在更新仓库: SnowEyes[0m
+[2025-08-21T17:21:28+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:21:28+08:00] 
+[36m🚀 正在更新仓库: ss0t-Scan[0m
+[2025-08-21T17:21:30+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:21:30+08:00] 
+[36m🚀 正在更新仓库: fuzzDicts[0m
+[2025-08-21T17:21:31+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:21:31+08:00] 
+[36m🚀 正在更新仓库: SecLists[0m
+[2025-08-21T17:25:55+08:00] 
+[36m🚀 正在更新仓库: quickstart[0m
+[2025-08-21T17:25:56+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:25:56+08:00] 
+[36m🚀 正在更新仓库: demo-scripts[0m
+[2025-08-21T17:25:58+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:25:58+08:00] 
+[36m🚀 正在更新仓库: excalidraw[0m
+[2025-08-21T17:26:00+08:00] [32m✔️ 更新成功:
+Already up to date.
+[0m[2025-08-21T17:26:00+08:00] 
+[36m🚀 正在更新仓库: Winscan[0m
+[2025-08-21T17:26:01+08:00] [31m❌ 更新失败: exit status 0xc000013a
+输出: [0m
+[2025-08-21T17:26:01+08:00] 
+[36m🚀 正在更新仓库: BucketTool[0m
